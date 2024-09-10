@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --White: hsl(0, 0%, 100%);
+    --LightPink: hsl(275, 100%, 97%);
+    --GrayishPurple: hsl(292, 16%, 49%);
+    --DarkPurple: hsl(292, 42%, 14%);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Work Sans", sans-serif;
+    font-size:16px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    color:var(--DarkPurple);
+}
+.container{
+    padding:20px;
+    border-radius:12px;
+    background-color:var(--White);
+    box-shadow:0 3px 8px 0px var(--DarkPurple);
+}
+.title{
+    display: flex;
+    align-items: center;
+    margin-bottom:20px;
+}
+.title h1{
+    margin-left:20px;
+    font-size:42px;
+}
+.title img{
+    width:40px;
+}
+ul li{
+    padding:10px;
+    cursor: pointer;
+    margin-bottom:5px;
+}
+ul li:not(:last-of-type){
+    border-bottom:1px solid var(--LightPink);
+}
+ul li .faq{
+    color:var(--DarkPurple);
+    font-size:18px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-bottom:10px;
+    transition:0.3s;
+}
+ul li .faq:hover{
+    color:var(--GrayishPurple);
+}
+ul li .faq img{
+    margin-left:40px;
+    width:30px;
+}
+ul li p{
+    color:var(--GrayishPurple);
+    transition:0.3s;
+}
+ul li.hidden p{
+    display:none;
+}
+@media (min-width:768px){
+    body{
+        background:url("./images/background-pattern-desktop.svg");
+        background-repeat: no-repeat;
+        background-position-y:-80px;
+        background-color:var(--LightPink);
+        min-height:100vh;
+    }
+    .container{
+        width:600px;
+    }
+}
+@media (max-width:767px){
+    body{
+        background:url("./images/background-pattern-mobile.svg");
+        background-repeat: no-repeat;
+        background-position-y:top;
+        background-position-x:center;
+        background-size:100%;
+        background-color:var(--LightPink);
+        min-height: 100vh;
+    }
+    .container{
+        max-width:100%;
+    }
+}
+
+ul{
+    list-style:none;
+}
+footer{
+    position:fixed;
+    bottom:3px;
+    text-align: center;
+}
+footer a{
+    font-size:18px;
+    font-weight:bold;
+    margin:5px;
+    color:var(--DarkPurple);
+    text-decoration:none;
+}
